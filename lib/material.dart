@@ -28,7 +28,7 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         title: Text(' Welcome First Page'),
+         title: Text(' Welcome Plan IT'),
         centerTitle: true,
       ),
 
@@ -70,34 +70,150 @@ class SecondPage extends StatefulWidget {
 }
 
 class _SecondPageState extends State<SecondPage> {
-  List<String> items = ['Item 1', 'Item 2', 'Item 3']; // Sample items
+
+
+
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Page'),
-
-        centerTitle: true,
-      ),
-      body: ListView.builder(
-        itemCount: items.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title:
-            Text(items[index]),
-          );
-        },
-      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            // Add more items to the list
-            items.add('New Item ${items.length + 1}');
+
+
           });
         },
         child: Icon(Icons.add),
       ),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        title: const Text(
+          "TaskBoard",
+          style: TextStyle(
+              fontWeight: FontWeight.w700, fontSize: 25, color: Colors.black),
+        ),
+      ),
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Material(
+                color: Colors.grey.withOpacity(0.1),
+                child: const SizedBox(
+                  height: 120,
+                  width: double.infinity,
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Task 1", style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w400),),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Text(
+                            "Your Personal task management and Planning solution for planning your day"),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 180),
+                          child: Text(
+                            "12:55 Pm 25th May,2024", style: TextStyle(
+                              color: Colors.black26, fontSize: 14),),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+            ),
+            const SizedBox(height: 12,),
+            Material(
+                color: Colors.grey.withOpacity(0.1),
+                child: const SizedBox(
+                  height: 120,
+                  width: double.infinity,
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Task 2", style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Text(
+                            "Your Personal task management and Planning solution for planning your day"),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 180),
+                          child: Text(
+                            "12:55 Pm 25th May,2024", style: TextStyle(
+                              color: Colors.grey, fontSize: 14),),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+            ),
+            const SizedBox(height: 12,),
+            Material(
+                color: Colors.grey.withOpacity(0.1),
+                child: const SizedBox(
+                  height: 120,
+                  width: double.infinity,
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Task 3", style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w400),),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Text(
+                            "Your Personal task management and Planning solution for planning your day"),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 180),
+                          child: Text(
+                            "12:55 Pm 25th May,2024", style: TextStyle(
+                              color: Colors.black38, fontSize: 14),),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+            ),
+          ],
+        ),
+      ),
+
+
     );
   }
+
 }
+
+
+
+
+
